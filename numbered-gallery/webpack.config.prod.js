@@ -256,12 +256,14 @@ module.exports = {
     new webpack.optimize.DedupePlugin(),
     // Minify the code.
     new webpack.optimize.UglifyJsPlugin({
+      beautify: false,
       compress: {
         screw_ie8: true, // React doesn't support IE8
         warnings: false
       },
       mangle: {
-        screw_ie8: true
+        screw_ie8: true,
+        keep_fnames: true
       },
       output: {
         comments: false,
