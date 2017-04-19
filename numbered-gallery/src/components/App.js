@@ -1,26 +1,34 @@
 import React from 'react';
-import { Component } from 'react';
 import { Store } from './Store';
 import Container from './Container';
-import centrifuge from '../images/centrifuge-insert_1920x1280.jpg';
-import '../css/App.css';
+import MediaObject from './MediaObject';
+import MediaHeading from './MediaHeading';
+import MediaText from './MediaText';
+import '../css/app.css';
 
-let title = Store.imageData[0].title;
+let title = Store.imgData[1].title;
+let imgUrl = Store.imgData[1].url;
+let text = Store.imgData[1].description;
 
-class App extends Component {
+class App extends React.Component {
   render() {
-    console.log(`title: ${title}`);
     return (
       <div className="App">
+        <MediaObject
+          className="col mr-2 ml-2" 
+          text={ text }>
+            <MediaHeading className="mt-5" heading={ title }></MediaHeading>
+            <MediaText text={ text }></MediaText>
+        </MediaObject> 
         <Container
           title={ title } 
           className="greenbg"
           onClick={ e => console.log('app was clicked') }
         >
           <img
-            src={ centrifuge }
+            src={ imgUrl }
             style={ {width: "100%"} }
-            alt="operating a centrifuge"
+            alt={ title }
           />
         </Container>
       </div>
