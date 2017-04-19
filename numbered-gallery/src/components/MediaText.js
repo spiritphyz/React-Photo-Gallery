@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import '../css/media-text.css';
+import '../css/media-object-text.css';
 
 export default function MediaText(props) {
-  const { text, children, className, ...moreProps } = props;
-  const joinClasses = classNames('media-text', className);
+  const { text, className, children,...moreProps } = props;
+  const joinClasses = classNames('media-object-text', className);
 
   return (
     <div>
@@ -17,6 +17,6 @@ export default function MediaText(props) {
 
 MediaText.propTypes = {
   text: PropTypes.string,
-  children: PropTypes.node,
-  className: PropTypes.string
+  className: PropTypes.string,
+  children: PropTypes.node
 };

@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import '../css/media-heading.css';
+import '../css/media-object-heading.css';
 
 export default function MediaHeading(props) {
-  const { heading, children, className, ...moreProps } = props;
-  const joinClasses = classNames('media-heading', className);
+  const { heading, className, children, ...moreProps } = props;
+  const joinClasses = classNames('media-object-heading', className);
 
   return (
     <header>
@@ -17,6 +17,6 @@ export default function MediaHeading(props) {
 
 MediaHeading.propTypes = {
   heading: PropTypes.string,
-  children: PropTypes.object,
-  className: PropTypes.string
+  className: PropTypes.string,
+  children: PropTypes.node
 };
