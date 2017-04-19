@@ -23,6 +23,6 @@ export default class Container extends Component {
 // https://facebook.github.io/react/docs/typechecking-with-proptypes.html#proptypes
 Container.propTypes = {
   title: PropTypes.string,
-  children: PropTypes.object,
+  children: PropTypes.node,
   className: PropTypes.string
 };
