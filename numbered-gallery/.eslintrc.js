@@ -25,7 +25,7 @@ module.exports = {
         'no-multi-spaces': 1,
         'space-before-blocks': 1,
         'keyword-spacing': [1, { 'before': true, 'after': true }],
-        'space-infix-ops': 1,
+        /* 'space-infix-ops': 1, */
         /* Variable declaration */
         'one-var': [1, { 'uninitialized': 'never', 'initialized': 'never' }],
         'no-use-before-define': 2,
