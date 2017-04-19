@@ -6,7 +6,7 @@ import '../css/Container.css';
 
 export default class Container extends Component {
   render() {
-    const { title, children, className, ...moreProps } = this.props;
+    const { title, className, children, ...moreProps } = this.props;
     const joinClasses = classNames('Container', className);
 
     return (
@@ -23,6 +23,6 @@ export default class Container extends Component {
 // https://facebook.github.io/react/docs/typechecking-with-proptypes.html#proptypes
 Container.propTypes = {
   title: PropTypes.string,
-  children: PropTypes.node,
-  className: PropTypes.string
+  className: PropTypes.string,
+  children: PropTypes.node
 };
