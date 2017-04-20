@@ -34,6 +34,7 @@ export const Store = {
   },
   setPosition: function(newPosition) {
     this.position = newPosition;
+    return this.getPosition();
   },
   getImages: function() {
     return this.imgData;
