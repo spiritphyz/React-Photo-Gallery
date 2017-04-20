@@ -14,14 +14,16 @@ class App extends React.Component {
   render() {
     return (
       <div className="app">
-        <NumberBar images={ images }></NumberBar>
-        <MediaObject
-          imgUrl={ imgUrl }
-          alt={ alt }
-          heading={ heading }
-          text={ text }
-        >
-        </MediaObject> 
+        <div className="container-fluid">
+          <NumberBar images={ images }></NumberBar>
+          <MediaObject
+            imgUrl={ imgUrl }
+            alt={ alt }
+            heading={ heading }
+            text={ text }
+          >
+          </MediaObject>
+        </div>
       </div>
     );
   }
