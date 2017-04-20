@@ -12,21 +12,19 @@ export default function MediaObject(props) {
 
   return (
     <section className={ joinClasses } { ...moreProps }>
-      <div className="container-fluid">
-        <div className="row">
-          <div className="col-md-9 mt-0 pr-0 pl-0">
-            <MediaImg 
-              className="w-100 pr-3"
-              src={ imgUrl }
-              alt={ alt }
-            >
-            </MediaImg>
-          </div>
-          <main className="col mr-2 ml-2">
-            <MediaHeading className="mt-5" heading={ heading }></MediaHeading>
-            <MediaText text={ text }></MediaText>
-          </main>
+      <div className="row">
+        <div className="col-md-9 mt-0 pr-0 pl-0">
+          <MediaImg 
+            className="w-100"
+            src={ imgUrl }
+            alt={ alt }
+          >
+          </MediaImg>
         </div>
+        <main className="col mr-3 ml-4">
+          <MediaHeading className="mt-4 pt-1" heading={ heading }></MediaHeading>
+          <MediaText text={ text }></MediaText>
+        </main>
       </div>
       { children }
     </section>
