@@ -15,7 +15,13 @@ class App extends React.Component {
     return (
       <div className="app">
         <div className="container-fluid">
-          <NumberBar images={ images }></NumberBar>
+          <div className="row"> 
+            <NumberBar
+              images={ images }
+              className="navbar navbar-toggleable-sm navbar-inverse bg-faded pt-0 pb-0 w-100 gradient-bg"
+            >
+            </NumberBar>
+          </div>
           <MediaObject
             imgUrl={ imgUrl }
             alt={ alt }

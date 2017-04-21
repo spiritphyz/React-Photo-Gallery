@@ -6,10 +6,11 @@ import '../css/numberbar.css';
 export default function NumberBar(props) {
   const { images, className, children, ...moreProps } = props;
   const joinClasses = classNames('numberbar', className);
+  console.log('🍊  classes are', joinClasses);
 
   return (
     <div className={ joinClasses } { ...moreProps }>
-      <nav className="navbar navbar-toggleable-md navbar-light bg-faded">
+      <nav>
         <ul>
         { images.map((img, idx) => {
             let num = ++idx;

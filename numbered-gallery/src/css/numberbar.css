@@ -1,0 +1,11 @@
+.numberbar {
+
+}
+
+.gradient-bg {
+  background: #58585a; /* Old browsers */
+  background: -moz-linear-gradient(left, #58585a 0%, #dadadb 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, #58585a 0%,#dadadb 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, #58585a 0%,#dadadb 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#58585a', endColorstr='#dadadb',GradientType=1 ); /* IE6-9 */    
+}
