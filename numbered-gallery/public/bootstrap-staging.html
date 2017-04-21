@@ -19,6 +19,13 @@
     .disabled {
       background-color: rgba(221, 221, 221, 1)
     }
+    .smaller {
+      font-size: .90rem;
+    }
+    .vsmall {
+      font-size: .25rem;
+      vertical-align: 13%;
+    }
   </style>
 </head>
 <body>
@@ -32,41 +39,45 @@
         <div class="collapse navbar-collapse" id="navbarToggler">
         <ul class="navbar-nav font-weight-bold">
           <li class="nav-item pr-4 pl-4">
-            <a class="nav-link" href="#">01</a>
+            <a class="nav-link smaller" href="#">01</a>
           </li>
           <li class="nav-item pr-4 pl-4 active" style="border-bottom: 3px solid orange">
-            <a class="nav-link" href="#">02
+            <a class="nav-link smaller" href="#">02
             <span class="sr-only">(current)</span>
             </a>
           </li>
           <li class="nav-item pr-4 pl-4">
-            <a class="nav-link" href="#">03</a>
+            <a class="nav-link smaller" href="#">03</a>
           </li>
           <li class="nav-item pr-4 pl-4">
-            <a class="nav-link" href="#">04</a>
+            <a class="nav-link smaller" href="#">04</a>
           </li>
           <li class="nav-item pr-4 pl-4">
-            <a class="nav-link" href="#">05</a>
+            <a class="nav-link smaller" href="#">05</a>
           </li>
           <li class="nav-item pr-4 pl-4">
-            <a class="nav-link" href="#">06</a>
+            <a class="nav-link smaller" href="#">06</a>
           </li>
           <li class="nav-item pr-4 pl-4">
-            <a class="nav-link" href="#">07</a>
+            <a class="nav-link smaller" href="#">07</a>
           </li>
           <li class="nav-item pr-4 pl-4">
-            <a class="nav-link" href="#">08</a>
+            <a class="nav-link smaller" href="#">08</a>
           </li>
         </ul>
       </nav>
     </div>
     <div class="row">
-      <div class="col-md-9 mt-0 pr-0 pl-0">
-        <img class="w-100" src="http://spiritphyz.io/img/gg/chair-black-empty_19280x1280.jpg" alt="test image" />
+      <div class="col-md-8 mt-0 pr-0 pl-0">
+        <img class="w-100" src="../src/images/chair-black-empty_19280x1280.jpg" alt="test image" />
       </div>
       <main class="col mr-3 ml-4">
         <h5 class="mt-4 pt-1">Diagnostic Medical Imaging</h5>
-        Nuclear medicine technologists prepare and administer radioactive drugs that make abnormal areas of the body appear different than normal areas, use special cameras to detect gamma rays emitted by the radioactive drugs in a patient’s body, explain imaging procedures to patients and answer questions.
+        <p>Nuclear medicine technologists prepare and administer radioactive drugs that make abnormal areas of the body appear different than normal areas, use special cameras to detect gamma rays emitted by the radioactive drugs in a patient’s body, explain imaging procedures to patients and answer questions.</p>
+        <div class="d-flex justify-content-between mt-5">
+          <button type="button" class="btn"><a class="small"><span class="vsmall">◀</span> PREV</a></button>
+          <button type="button" class="btn btn-warning"><a class="small">NEXT <span class="vsmall">▶</span></a></button>
+        </div>
       </main>
     </div>
   </div>
