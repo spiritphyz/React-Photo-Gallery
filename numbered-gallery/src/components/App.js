@@ -4,29 +4,59 @@ import MediaObject from './MediaObject';
 import NumberBar from './NumberBar';
 import '../css/app.css';
 
-let images = Store.imgData;
-let imgUrl = Store.imgData[1].url;
-let alt = Store.imgData[1].alt;
-let heading = Store.imgData[1].title;
-let text = Store.imgData[1].description;
-
 class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      images: Store.imgData,
+      currPos: Store.position,
+      imgUrl: '',
+      alt: '',
+      heading: '',
+      text: ''
+    };
+    this.navBarClick = this.handleNavBarButtonClick.bind(this);
+    this.updateImgData = this.handleUpdateImgData.bind(this);
+  } 
+
+  handleNavBarButtonClick() {
+
+  }
+
+  changePosition(newIndex) {
+
+  }
+
+  handleUpdateImgData() {
+    let currImg = this.state.images[this.state.currPos];
+    this.setState({
+      imgUrl: currImg.url,
+      alt: currImg.alt,
+      heading: currImg.title,
+      text: currImg.description
+    });
+  }
+
+  componentDidMount() {
+    this.updateImgData();
+  }
+
   render() {
     return (
       <div className="app">
         <div className="container-fluid">
           <div className="row"> 
             <NumberBar
-              images={ images }
+              images={ this.state.images }
               className="navbar navbar-toggleable-sm navbar-inverse bg-faded pt-0 pb-0 w-100 gradient-bg"
             >
             </NumberBar>
           </div>
           <MediaObject
-            imgUrl={ imgUrl }
-            alt={ alt }
-            heading={ heading }
-            text={ text }
+            imgUrl={ this.state.imgUrl }
+            alt={ this.state.alt }
+            heading={ this.state.heading }
+            text={ this.state.text }
           >
           </MediaObject>
         </div>
