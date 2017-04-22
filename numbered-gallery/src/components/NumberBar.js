@@ -11,25 +11,30 @@ export default function NumberBar(props) {
   return (
     <div className={ joinClasses } { ...moreProps }>
       <nav>
-        <ul className="navbar-nav font-weight-bold">
-        { images.map((img, idx) => {
-            let num = ++idx;
-            let displayNum = num < 10 ? '0' + num : '' + num;
+        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        <div className="collapse navbar-collapse" id="navbarToggler">
+          <ul className="navbar-nav font-weight-bold">
+            { images.map((img, idx) => {
+                let num = ++idx;
+                let displayNum = num < 10 ? '0' + num : '' + num;
 
-            return (
-              <NumberBarButton
-                label={ displayNum }
-                key={ num }
-                index={ num }
-                className="nav-item pr-4 pl-4"
-                anchorClassName="nav-link smaller"
-                buttonClick={ buttonClick }
-              >
-              </NumberBarButton>
-            );
-          })
-        }
-        </ul>
+                return (
+                  <NumberBarButton
+                    label={ displayNum }
+                    key={ num }
+                    index={ num }
+                    className="nav-item pr-4 pl-4"
+                    anchorClassName="nav-link smaller"
+                    buttonClick={ buttonClick }
+                  >
+                  </NumberBarButton>
+                );
+              })
+            }
+          </ul>
+        </div>
       </nav>
       { children }
     </div>
