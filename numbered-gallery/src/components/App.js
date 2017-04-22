@@ -69,6 +69,7 @@ class App extends React.Component {
           >
           </MediaObject>
         </div>
+        <footer className="footer"></footer>
       </div>
     );
   }
