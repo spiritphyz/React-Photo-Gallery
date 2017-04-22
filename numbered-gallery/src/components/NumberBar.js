@@ -5,7 +5,7 @@ import NumberBarButton from './NumberBarButton';
 import '../css/numberbar.css';
 
 export default function NumberBar(props) {
-  const { images, className, buttonClick, children, ...moreProps } = props;
+  const { images, className, buttonClick, currPos, children, ...moreProps } = props;
   const joinClasses = classNames('numberbar', className);
 
   return (
@@ -45,5 +45,6 @@ NumberBar.propTypes = {
   images: PropTypes.array,
   className: PropTypes.string,
   buttonClick: PropTypes.func,
+  currPos: PropTypes.number,
   children: PropTypes.node
 };

@@ -58,6 +58,7 @@ class App extends React.Component {
               images={ this.state.images }
               className="navbar navbar-toggleable-sm navbar-inverse bg-faded pt-0 pb-0 w-100 gradient-bg"
               buttonClick={ this.updateImgData }
+              currPos={ this.state.currPos }
             >
             </NumberBar>
           </div>
