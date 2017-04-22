@@ -1,3 +1,6 @@
+// FIXME: using direct Unicode symbols is unsafe, should use Unicode numbers instead
+// http://stackoverflow.com/questions/27934238/rendering-raw-html-with-reactjs
+// FIXME: convert all strings for 'description' property to backticks for safer inputs that can have apostrophes and double quotes in the text
 export const Store = {
   imgData: [
     {
@@ -40,8 +43,8 @@ export const Store = {
       id: '5000',
       url: 'http://spiritphyz.io/img/gg/blood-pressure_1920x1280.jpg',
       alt: 'measuring blood pressure',
-      title: 'The Symplicity&trade; Renal Denervation (RDN) System',
-      description: 'The Symplicity renal denervation system consists of a small steerable treatment catheter and an automatically-controlled treatment delivery generator. The treatment does not require open surgery. A guiding catheter is inserted through a sheath to direct the Symplicity&trade; catheter to the renal arteries. The Symplicity catheter delivers high-frequency radio waves, called RF waves, to 4-6 locations within each of the two renal arteries. The energy delivered is about 8 watts, similar to that used to power a flashlight. This energy delivery aims to disrupt the nerves and lower blood pressure over a period of months',
+      title: 'The Symplicity™ Renal Denervation (RDN) System',
+      description: 'The Symplicity renal denervation system consists of a small steerable treatment catheter and an automatically-controlled treatment delivery generator. The treatment does not require open surgery. A guiding catheter is inserted through a sheath to direct the Symplicity™ catheter to the renal arteries. The Symplicity catheter delivers high-frequency radio waves, called RF waves, to 4-6 locations within each of the two renal arteries. The energy delivered is about 8 watts, similar to that used to power a flashlight. This energy delivery aims to disrupt the nerves and lower blood pressure over a period of months',
       width: 1920,
       height: 1280,
     },
@@ -50,7 +53,7 @@ export const Store = {
       url: 'http://spiritphyz.io/img/gg/surgery-empty-table_1920x1062.jpg',
       alt: 'empty surgery table',
       title: 'Mission Bay BMT Facilities: A Wish Come True',
-      description: 'Before the new Mission Bay hospital was built, the blood and marrow transplant (BMT) team was tasked with drawing up a "dream big" wish list &ndash; a list of innovative features and small touches that would make up the ideal BMT facility for patients, parents and staff alike. So Dr. Mort Cowan, chief of allergy, immunology and BMT at UCSF Benioff Children&rsquo;s Hospital San Francisco, gathered together parents, nurses and doctors for some extensive brainstorming.',
+      description: `Before the new Mission Bay hospital was built, the blood and marrow transplant (BMT) team was tasked with drawing up a “dream big” wish list — a list of innovative features and small touches that would make up the ideal BMT facility for patients, parents and staff alike. So Dr. Mort Cowan, chief of allergy, immunology and BMT at UCSF Benioff Children’s Hospital San Francisco, gathered together parents, nurses and doctors for some extensive brainstorming.`,
       width: 1920,
       height: 1062,
     },
@@ -59,7 +62,7 @@ export const Store = {
       url: 'http://spiritphyz.io/img/gg/skull-model_1920x1272.jpg',
       alt: 'close-up of skull model in a waiting room',
       title: 'Johns Hopkins Blood-Brain Barrier Working Group',
-      description: 'The blood-brain barrier (BBB) is a dynamic interface that separates the brain from the circulatory system and protects the central nervous system from potentially harmful chemicals while regulating transport of essential molecules and maintaining a stable environment.<p>The BBB is formed by highly specialized endothelial cells that line brain capillaries and transduce signals from the vascular system and from the brain. The structure and function of the BBB is dependent upon the complex interplay between the different cell types (such as the endothelial cells, astrocytes, and pericytes), and the extracellular matrix of the brain and blood flow in the capillaries.</p>',
+      description: 'The blood-brain barrier (BBB) is a dynamic interface that separates the brain from the circulatory system and protects the central nervous system from potentially harmful chemicals while regulating transport of essential molecules and maintaining a stable environment. The BBB is formed by highly specialized endothelial cells that line brain capillaries and transduce signals from the vascular system and from the brain. The structure and function of the BBB is dependent upon the complex interplay between the different cell types (such as the endothelial cells, astrocytes, and pericytes), and the extracellular matrix of the brain and blood flow in the capillaries.',
       width: 1920,
       height: 1272,
     }
