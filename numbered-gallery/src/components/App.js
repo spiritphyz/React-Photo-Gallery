@@ -17,19 +17,27 @@ class App extends React.Component {
     };
     this.navBarClick = this.handleNavBarButtonClick.bind(this);
     this.updateImgData = this.handleUpdateImgData.bind(this);
+    this.updatePosition = this.handleChangePosition.bind(this);
   } 
 
-  handleNavBarButtonClick() {
+  handleNavBarButtonClick(newIdx) {
 
   }
 
-  changePosition(newIndex) {
-
+  handleChangePosition(newIdx) {
+    let isValidNum = newIdx > -1 && newIdx < this.state.images.length;
+    if (isValidNum) {
+      return Store.setPosition(newIdx);
+    } else {
+      console.log('🍊  invalid index given to handleChangePosition:', newIdx);
+    }
   }
 
-  handleUpdateImgData() {
-    let currImg = this.state.images[this.state.currPos];
+  handleUpdateImgData(newIdx = this.state.currPos) {
+    let currPos = this.updatePosition(newIdx);
+    let currImg = this.state.images[currPos];
     this.setState({
+      currPos: currPos,
       imgUrl: currImg.url,
       alt: currImg.alt,
       heading: currImg.title,
@@ -49,6 +57,7 @@ class App extends React.Component {
             <NumberBar
               images={ this.state.images }
               className="navbar navbar-toggleable-sm navbar-inverse bg-faded pt-0 pb-0 w-100 gradient-bg"
+              buttonClick={ this.updateImgData }
             >
             </NumberBar>
           </div>

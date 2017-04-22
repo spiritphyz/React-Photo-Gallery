@@ -5,7 +5,7 @@ import NumberBarButton from './NumberBarButton';
 import '../css/numberbar.css';
 
 export default function NumberBar(props) {
-  const { images, className, children, ...moreProps } = props;
+  const { images, className, buttonClick, children, ...moreProps } = props;
   const joinClasses = classNames('numberbar', className);
 
   return (
@@ -14,14 +14,16 @@ export default function NumberBar(props) {
         <ul className="navbar-nav font-weight-bold">
         { images.map((img, idx) => {
             let num = ++idx;
-            let displayNum = num < 10 ? '0' + num : num;
+            let displayNum = num < 10 ? '0' + num : '' + num;
 
             return (
               <NumberBarButton
                 label={ displayNum }
                 key={ num }
+                index={ num }
                 className="nav-item pr-4 pl-4"
                 anchorClassName="nav-link smaller"
+                buttonClick={ buttonClick }
               >
               </NumberBarButton>
             );
@@ -37,5 +39,6 @@ export default function NumberBar(props) {
 NumberBar.propTypes = {
   images: PropTypes.array,
   className: PropTypes.string,
+  buttonClick: PropTypes.func,
   children: PropTypes.node
 };

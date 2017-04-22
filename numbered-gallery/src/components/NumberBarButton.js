@@ -4,12 +4,13 @@ import classNames from 'classnames';
 import '../css/numberbar-button.css';
 
 export default function NumberBarButton(props) {
-  const { label, uniqKey, className, anchorClassName, children, ...moreProps } = props;
+  const { label, index, className, anchorClassName, buttonClick, children, ...moreProps } = props;
   const joinClasses = classNames('numberbar-button', className);
+  const imgIdx = index - 1;
 
   return (
-    <div className={ joinClasses } { ...moreProps }>
-      <li key={ uniqKey }>
+    <div className={ joinClasses } onClick={ () => buttonClick(imgIdx) } { ...moreProps }>
+      <li>
         <a href="#" className={ anchorClassName }>{ label }</a>
       </li>
       { children }
@@ -19,8 +20,9 @@ export default function NumberBarButton(props) {
 
 NumberBarButton.propTypes = {
   label: PropTypes.string,
-  uniqKey: PropTypes.string,
+  index: PropTypes.number,
   className: PropTypes.string,
   anchorClassName: PropTypes.string,
+  buttonClick: PropTypes.func,
   children: PropTypes.node
 };
