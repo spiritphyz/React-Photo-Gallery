@@ -28,6 +28,7 @@ export default function NumberBar(props) {
                     className="nav-item pr-4 pl-4"
                     anchorClassName="nav-link smaller"
                     buttonClick={ buttonClick }
+                    currPos={ currPos }
                   >
                   </NumberBarButton>
                 );

@@ -1,5 +1,10 @@
 .numberbar-button {
+  font-weight: 600;
+}
 
+.underline {
+  text-color: #fff;
+  border-bottom: 3px solid #d9534f;
 }
 
 .smaller {
