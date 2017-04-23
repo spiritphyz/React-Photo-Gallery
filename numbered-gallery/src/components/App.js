@@ -15,12 +15,12 @@ class App extends React.Component {
       heading: '',
       text: ''
     };
-    this.navBarClick = this.handleNavBarButtonClick.bind(this);
+    this.MediaButtonClick = this.handleMediaButtonClick.bind(this);
     this.updateImgData = this.handleUpdateImgData.bind(this);
     this.updatePosition = this.handleChangePosition.bind(this);
   } 
 
-  handleNavBarButtonClick(newIdx) {
+  handleMediaButtonClick() {
 
   }
 
