@@ -9,7 +9,7 @@ export default function MediaButton(props) {
   let button;
   if (isDisabled) {
     button = (
-      <button type="button" className={ joinClasses } disabled onClick={ () => buttonClick() } { ...moreProps }>
+      <button type="button" className={ joinClasses } disabled { ...moreProps }>
         { label }
       </button>
     ); 

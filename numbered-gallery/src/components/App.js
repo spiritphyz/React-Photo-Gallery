@@ -13,7 +13,9 @@ class App extends React.Component {
       imgUrl: '',
       alt: '',
       heading: '',
-      text: ''
+      text: '',
+      disablePrevButton: false,
+      disableNextButton: false
     };
     this.MediaButtonClick = this.handleMediaButtonClick.bind(this);
     this.updateImgData = this.handleUpdateImgData.bind(this);
@@ -40,12 +42,24 @@ class App extends React.Component {
   handleUpdateImgData(newIdx = this.state.currPos) {
     const currPos = this.updatePosition(newIdx);
     const currImg = this.state.images[currPos];
+    let prevButtonState = false;
+    let nextButtonState = false;
+
+    if (currPos === 0) {
+      prevButtonState = true;
+    }
+    if (currPos === this.state.images.length - 1) {
+      nextButtonState = true;
+    }
+
     this.setState({
       currPos: currPos,
       imgUrl: currImg.url,
       alt: currImg.alt,
       heading: currImg.title,
-      text: currImg.description
+      text: currImg.description,
+      disablePrevButton: prevButtonState,
+      disableNextButton: nextButtonState
     });
   }
 
@@ -71,6 +85,8 @@ class App extends React.Component {
             alt={ this.state.alt }
             heading={ this.state.heading }
             text={ this.state.text }
+            prevButtonState={ this.state.disablePrevButton }
+            nextButtonState={ this.state.disableNextButton }
             buttonClick={ this.MediaButtonClick }
           >
           </MediaObject>
