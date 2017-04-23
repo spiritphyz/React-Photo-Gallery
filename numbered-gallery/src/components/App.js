@@ -20,12 +20,16 @@ class App extends React.Component {
     this.updatePosition = this.handleChangePosition.bind(this);
   } 
 
-  handleMediaButtonClick() {
-
+  handleMediaButtonClick(move = 'increase') {
+    let currPos = this.state.currPos;
+    const nextPos = move === 'increase' ? ++currPos : --currPos;
+    if (nextPos > -1 && nextPos < this.state.images.length) {
+      this.updateImgData(nextPos);
+    }
   }
 
   handleChangePosition(newIdx) {
-    let isValidNum = newIdx > -1 && newIdx < this.state.images.length;
+    const isValidNum = newIdx > -1 && newIdx < this.state.images.length;
     if (isValidNum) {
       return Store.setPosition(newIdx);
     } else {
@@ -34,8 +38,8 @@ class App extends React.Component {
   }
 
   handleUpdateImgData(newIdx = this.state.currPos) {
-    let currPos = this.updatePosition(newIdx);
-    let currImg = this.state.images[currPos];
+    const currPos = this.updatePosition(newIdx);
+    const currImg = this.state.images[currPos];
     this.setState({
       currPos: currPos,
       imgUrl: currImg.url,
@@ -67,6 +71,7 @@ class App extends React.Component {
             alt={ this.state.alt }
             heading={ this.state.heading }
             text={ this.state.text }
+            buttonClick={ this.MediaButtonClick }
           >
           </MediaObject>
         </div>
