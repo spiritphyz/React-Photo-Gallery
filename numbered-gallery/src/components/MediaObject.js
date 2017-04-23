@@ -10,6 +10,8 @@ import '../css/media-object.css';
 export default function MediaObject(props) {
   const { imgUrl, alt, heading, text, prevButtonState, nextButtonState, buttonClick, className, children, ...moreProps } = props;
   const joinClasses = classNames('media-object', className);
+  const prevButtonClass = prevButtonState ? "btn" : "btn btn-danger";
+  const nextButtonClass = nextButtonState ? "btn" : "btn btn-danger";
   const prevLabel = (
     <a className="small"><span className="vsmall">◀</span> PREV</a>
   );
@@ -33,14 +35,14 @@ export default function MediaObject(props) {
           <MediaText text={ text }></MediaText>
           <section className="d-flex justify-content-between mt-5">
             <MediaButton 
-              className="btn btn-danger"
+              className={ prevButtonClass }
               isDisabled={ prevButtonState }
               label={ prevLabel }
               buttonClick={ () => buttonClick('decrease') }
             >
             </MediaButton>
             <MediaButton 
-              className="btn btn-danger"
+              className={ nextButtonClass }
               isDisabled={ nextButtonState }
               label={ nextLabel }
               buttonClick={ () => buttonClick('increase') }
