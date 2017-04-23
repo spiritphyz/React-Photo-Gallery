@@ -22,7 +22,7 @@ export default function MediaObject(props) {
           </MediaImg>
         </div>
         <main className="col mr-3 ml-4">
-          <MediaHeading className="mt-4 pt-1" heading={ heading }></MediaHeading>
+          <MediaHeading className="mt-4 pt-1 text-danger" heading={ heading }></MediaHeading>
           <MediaText text={ text }></MediaText>
         </main>
       </div>
