@@ -2,8 +2,8 @@
 Demo: http://spiritphyz.io/giant-gallery
 
 ## Features
-#### Responsive Design
-The layout can accomodate wide desktop browser windows and skinny mobile phone screens. The navigation bar will collapse into a "hamburber menu" for image list access when the window is too narrow.
+#### Responsive and Accessible Design
+The layout can accomodate wide desktop browser windows and skinny mobile phone screens. The navigation bar will collapse into a "hamburber menu" for image list access when the window is too narrow. The menu system incorporates extra tags to provide additional information to users browsing with screen readers.
 
 #### Modular Components
 There is one main container component that sends state information to many 
@@ -19,7 +19,7 @@ The prev/next buttons display a "disabled" state when the current position is at
 ## Future Improvements
 
 #### Navigation Bar
-There is no functionality to handle many numbered items that expand beyond the width of the browser window. What should happen if there are 20 items in the gallery? A meeting with the UI/UX team is needed to talk about the behavior of the navbar when there is an excessive amount of images. It would also be nice to show the image headline in the hamburger menu while it's toggled on.
+There is no functionality to handle many numbered items that expand beyond the width of the browser window. What should happen if there are 20 items in the gallery? A meeting with the UI/UX team is needed to talk about the behavior of the navbar when there is an excessive amount of images. It would also be nice to show all the image headlines as a list in the hamburger menu while it's toggled on.
 
 #### More Polished UX
 The images stop fading when the images can be quickly loaded from the browser's cache instead of a network call. Areas like this inconsistent fading behavior can be improved in the future.
