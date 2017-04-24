@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import { Scrollbars } from 'react-custom-scrollbars';
 import MediaImg from './MediaImg';
 import MediaHeading from './MediaHeading';
 import MediaText from './MediaText';
@@ -13,7 +14,7 @@ export default function MediaObject(props) {
   const prevButtonClass = prevButtonState ? "btn" : "btn btn-danger";
   const nextButtonClass = nextButtonState ? "btn" : "btn btn-danger";
   const prevLabel = (
-    <a className="small"><span className="vsmall">◀</span> PREV</a>
+    <a className="small"><span className="vsmall">&#9664;</span> PREV</a>
   );
   const nextLabel = (
     <a className="small">NEXT <span className="vsmall">▶</span></a>
@@ -22,7 +23,7 @@ export default function MediaObject(props) {
   return (
     <section className={ joinClasses } { ...moreProps }>
       <div className="row">
-        <div className="col-md-9 mt-0 pr-0 pl-0">
+        <div className="col-md-8 mt-0 pr-0 pl-0">
           <MediaImg 
             className="w-100"
             src={ imgUrl }
@@ -30,10 +31,17 @@ export default function MediaObject(props) {
           >
           </MediaImg>
         </div>
-        <main className="col mr-3 ml-4">
-          <MediaHeading className="mt-4 pt-1 text-danger" heading={ heading }></MediaHeading>
-          <MediaText text={ text }></MediaText>
-          <section className="d-flex justify-content-between mt-5">
+        <main className="col mr-2 pr-0 ml-4">
+          <Scrollbars
+            className="mt-4"
+            autoHeight
+            autoHeightMin={ 100 }
+            autoHeightMax={ 400 }
+          >
+            <MediaHeading className="mr-4 text-danger" heading={ heading }></MediaHeading>
+            <MediaText className="mr-4" text={ text }></MediaText>
+          </Scrollbars>
+          <section className="d-flex justify-content-between mt-4 mr-4">
             <MediaButton 
               className={ prevButtonClass }
               isDisabled={ prevButtonState }
