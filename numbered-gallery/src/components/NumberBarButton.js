@@ -8,10 +8,14 @@ export default function NumberBarButton(props) {
   const imgIdx = index - 1;
   let joinClasses;
   let joinAnchorClasses;
+  let screenReaderTag = '';
 
   if (currPos === imgIdx) {
     joinClasses = classNames('numberbar-button', 'underline', className);
     joinAnchorClasses = classNames('active', anchorClassName);
+    screenReaderTag = (
+      <span className="sr-only">(current)</span>
+    );
   } else {
     joinClasses = classNames('numberbar-button', className);
     joinAnchorClasses = classNames(anchorClassName);
@@ -21,7 +25,7 @@ export default function NumberBarButton(props) {
   return (
     <div className={ joinClasses } onClick={ () => buttonClick(imgIdx) } { ...moreProps }>
       <li>
-        <a href="#" className={ joinAnchorClasses }>{ label }</a>
+        <a href="#" className={ joinAnchorClasses }>{ label }{ screenReaderTag }</a>
       </li>
       { children }
     </div>
