@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Animation Staging</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  <style>
+    .gradient-bg {
+      background: #58585a; /* Old browsers */
+      background: -moz-linear-gradient(left, #58585a 0%, #dadadb 100%); /* FF3.6-15 */
+      background: -webkit-linear-gradient(left, #58585a 0%,#dadadb 100%); /* Chrome10-25,Safari5.1-6 */
+      background: linear-gradient(to right, #58585a 0%,#dadadb 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#58585a', endColorstr='#dadadb',GradientType=1 ); /* IE6-9 */    
+    }
+    .prim-color {
+      background-color: rgba(237, 106, 38, 1)
+    }
+    .disabled {
+      background-color: rgba(221, 221, 221, 1)
+    }
+    .smaller {
+      font-size: .90rem;
+    }
+    .vsmall {
+      font-size: .25rem;
+      vertical-align: 13%;
+    }
+    .fade {
+      visibility: visible; 
+      opacity: 0;
+      transition: opacity 500ms 0ms;
+    }
+    .fade:hover {
+      visibility: visible;   
+      opacity: 1;
+      transition: opacity 500ms 0ms;
+    }
+  </style>
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <nav class="navbar navbar-toggleable-sm navbar-inverse bg-faded pt-0 pb-0 w-100 gradient-bg">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarToggler">
+          <ul class="navbar-nav font-weight-bold">
+            <li class="nav-item pr-4 pl-4">
+              <a class="nav-link smaller" href="#">01</a>
+            </li>
+            <li class="nav-item pr-4 pl-4 active" style="border-bottom: 3px solid #d9534f">
+              <a class="nav-link smaller" href="#">02
+              <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item pr-4 pl-4">
+              <a class="nav-link smaller" href="#">03</a>
+            </li>
+            <li class="nav-item pr-4 pl-4">
+              <a class="nav-link smaller" href="#">04</a>
+            </li>
+            <li class="nav-item pr-4 pl-4">
+              <a class="nav-link smaller" href="#">05</a>
+            </li>
+            <li class="nav-item pr-4 pl-4">
+              <a class="nav-link smaller" href="#">06</a>
+            </li>
+            <li class="nav-item pr-4 pl-4">
+              <a class="nav-link smaller" href="#">07</a>
+            </li>
+            <li class="nav-item pr-4 pl-4">
+              <a class="nav-link smaller" href="#">08</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="row">
+      <div class="col-md-8 mt-0 pr-0 pl-0">
+        <img class="fade w-100" src="../src/images/chair-black-empty_1920x1280.jpg" alt="test image" />
+      </div>
+      <main class="col mr-3 ml-4">
+        <h5 class="mt-4 pt-1 text-danger">Diagnostic Medical Imaging</h5>
+        <p>Nuclear medicine technologists prepare and administer radioactive drugs that make abnormal areas of the body appear different than normal areas, use special cameras to detect gamma rays emitted by the radioactive drugs in a patient’s body, explain imaging procedures to patients and answer questions.</p>
+        <section class="d-flex justify-content-between mt-5">
+          <button type="button" class="btn" disabled><a class="small"><span class="vsmall">◀</span> PREV</a></button>
+          <button type="button" class="btn btn-danger"><a class="small">NEXT <span class="vsmall">▶</span></a></button>
+        </section>
+      </main>
+    </div>
+  </div>
+  <footer>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+  </body>
+</body>
+</html>
