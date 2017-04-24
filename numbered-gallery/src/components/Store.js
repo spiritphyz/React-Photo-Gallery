@@ -26,7 +26,7 @@ export const Store = {
       url: 'http://spiritphyz.io/img/gg/chair-black-empty_1920x1280.jpg',
       alt: 'medical station ready to receive patient',
       title: 'Diagnostic Medical Imaging',
-      description: 'Nuclear medicine technologiests prepare and administer radioactive drugs that make abnormal areas of the body appear different than normal areas, use special cameras to detect gamma rays emitted by the radioactive drugs in a patient’s body, explain imaging procedures to patients and answer questions.',
+      description: 'Nuclear medicine technologists prepare and administer radioactive drugs that make abnormal areas of the body appear different than normal areas, use special cameras to detect gamma rays emitted by the radioactive drugs in a patient’s body, explain imaging procedures to patients and answer questions.',
       width: 1920,
       height: 1280,
     },

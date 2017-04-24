@@ -36,12 +36,12 @@ export default function MediaObject(props) {
             className="mt-4"
             autoHeight
             autoHeightMin={ 100 }
-            autoHeightMax={ 400 }
+            autoHeightMax={ 350 }
           >
             <MediaHeading className="mr-4 text-danger" heading={ heading }></MediaHeading>
             <MediaText className="mr-4" text={ text }></MediaText>
           </Scrollbars>
-          <section className="d-flex justify-content-between mt-4 mr-4">
+          <section className="d-flex justify-content-between mt-4 pt-2 mr-3 pr-3">
             <MediaButton 
               className={ prevButtonClass }
               isDisabled={ prevButtonState }
