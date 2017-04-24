@@ -1,0 +1,13 @@
+.media-object-image {
+
+}
+
+.fade-off {
+  transition: opacity 100ms 0ms;
+  opacity: 0.01;
+}
+
+.fade-on {
+  transition: opacity 500ms 0ms;
+  opacity: 1;
+} 

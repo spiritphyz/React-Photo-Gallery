@@ -12,6 +12,7 @@ class App extends React.Component {
       currPos: Store.position,
       imgUrl: '',
       alt: '',
+      imgLoaded: false,
       heading: '',
       text: '',
       disablePrevButton: false,
@@ -20,6 +21,7 @@ class App extends React.Component {
     this.MediaButtonClick = this.handleMediaButtonClick.bind(this);
     this.updateImgData = this.handleUpdateImgData.bind(this);
     this.updatePosition = this.handleChangePosition.bind(this);
+    this.updateImgLoaded = this.handleUpdateImgLoaded.bind(this);
   } 
 
   handleMediaButtonClick(move = 'increase') {
@@ -27,15 +29,6 @@ class App extends React.Component {
     const nextPos = move === 'increase' ? ++currPos : --currPos;
     if (nextPos > -1 && nextPos < this.state.images.length) {
       this.updateImgData(nextPos);
-    }
-  }
-
-  handleChangePosition(newIdx) {
-    const isValidNum = newIdx > -1 && newIdx < this.state.images.length;
-    if (isValidNum) {
-      return Store.setPosition(newIdx);
-    } else {
-      console.log('🍊  invalid index given to handleChangePosition:', newIdx);
     }
   }
 
@@ -56,11 +49,25 @@ class App extends React.Component {
       currPos: currPos,
       imgUrl: currImg.url,
       alt: currImg.alt,
+      imgLoaded: false,
       heading: currImg.title,
       text: currImg.description,
       disablePrevButton: prevButtonState,
       disableNextButton: nextButtonState
     });
+  }
+
+  handleChangePosition(newIdx) {
+    const isValidNum = newIdx > -1 && newIdx < this.state.images.length;
+    if (isValidNum) {
+      return Store.setPosition(newIdx);
+    } else {
+      console.log('🍊  invalid index given to handleChangePosition:', newIdx);
+    }
+  }
+
+  handleUpdateImgLoaded() {
+    this.setState({imgLoaded: true});
   }
 
   componentDidMount() {
@@ -81,8 +88,13 @@ class App extends React.Component {
             </NumberBar>
           </div>
           <MediaObject
+            imgID={ this.state.images[this.state.currPos].id }
             imgUrl={ this.state.imgUrl }
+            imgWidth={ this.state.images[this.state.currPos].width }
+            imgHeight={ this.state.images[this.state.currPos].height }
             alt={ this.state.alt }
+            imgLoaded={ this.state.imgLoaded }
+            changeImgStatus={ this.updateImgLoaded }
             heading={ this.state.heading }
             text={ this.state.text }
             prevButtonState={ this.state.disablePrevButton }
