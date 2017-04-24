@@ -7,6 +7,7 @@ import MediaHeading from './MediaHeading';
 import MediaText from './MediaText';
 import MediaButton from './MediaButton';
 import '../css/media-object.css';
+import '../css/typicons.css';
 
 export default function MediaObject(props) {
   const { imgUrl, alt, heading, text, prevButtonState, nextButtonState, buttonClick, className, children, ...moreProps } = props;
@@ -14,10 +15,10 @@ export default function MediaObject(props) {
   const prevButtonClass = prevButtonState ? "btn" : "btn btn-danger";
   const nextButtonClass = nextButtonState ? "btn" : "btn btn-danger";
   const prevLabel = (
-    <a className="small"><span className="vsmall">&#9664;</span> PREV</a>
+    <div><span className="typcn typcn-media-play-reverse vsmall"></span><a className="small">PREV</a></div>
   );
   const nextLabel = (
-    <a className="small">NEXT <span className="vsmall">▶</span></a>
+    <div><a className="small">NEXT</a><span className="typcn typcn-media-play vsmall"></span></div>
   );
 
   return (
