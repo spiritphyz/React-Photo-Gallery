@@ -11,7 +11,7 @@ The layout can accomodate wide desktop browser windows and skinny mobile phone s
 ![giant-gallery-reusable-components](https://cloud.githubusercontent.com/assets/7908723/25415281/91d5d9b6-29eb-11e7-8ac8-88216d4de481.gif)
 
 There is one main container component that sends state information to many 
-stateless functional components. The functional components can pass along further event bindings and also feature CSS overrides. The "previous" and "next" buttons are actually the same component, re-used by having different properties sent to the stateless component.
+stateless functional components. The functional components can pass along further event bindings and also feature CSS overrides. The "previous" and "next" buttons are actually the same component, re-used by having different properties sent to them for visual outcomes.
 
 ### Polished UI and UX Design
 ![giant-gallery-auto-scrollbars](https://cloud.githubusercontent.com/assets/7908723/25415142/b05a4490-29ea-11e7-8012-ce7cf40cfa57.gif)
