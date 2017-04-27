@@ -10,11 +10,7 @@ class App extends React.Component {
     this.state = {
       images: Store.imgData,
       currPos: Store.position,
-      imgUrl: '',
-      alt: '',
       imgLoaded: false,
-      heading: '',
-      text: '',
       image: {
         id: '',
         url: '',
@@ -57,10 +53,7 @@ class App extends React.Component {
     this.setState({
       currPos: currPos,
       imgUrl: currImg.url,
-      alt: currImg.alt,
       imgLoaded: false,
-      heading: currImg.title,
-      text: currImg.description,
       image: {
         id: currImg.id,
         url: currImg.url,
