@@ -10,7 +10,8 @@ import '../css/media-object.css';
 import '../css/typicons.css';
 
 export default function MediaObject(props) {
-  const { imgID, imgUrl, imgWidth, imgHeight, alt, imgLoaded, changeImgStatus, heading, text, prevButtonState, nextButtonState, buttonClick, className, children, ...moreProps } = props;
+  const { image, imgLoaded, changeImgStatus, prevButtonState, nextButtonState, buttonClick, className, children, ...moreProps } = props;
+  const {id, url, width, height, alt, heading, text} = image;
   const joinClasses = classNames('media-object', className);
   const prevButtonClass = prevButtonState ? "btn" : "btn btn-danger";
   const nextButtonClass = nextButtonState ? "btn" : "btn btn-danger";
@@ -28,9 +29,9 @@ export default function MediaObject(props) {
             <div>
               <MediaImg 
                 className="img-fluid"
-                src={ imgUrl }
-                imgWidth={ imgWidth }
-                imgHeight={ imgHeight }
+                src={ url }
+                imgWidth={ width }
+                imgHeight={ height }
                 alt={ alt }
                 imgLoaded={ imgLoaded }
                 changeImgStatus={ changeImgStatus }
@@ -46,8 +47,8 @@ export default function MediaObject(props) {
               autoHeightMin={ 110 }
               autoHeightMax={ 250 }
             >
-              <MediaHeading key={ imgID + 'a' } className="mr-4 text-danger" heading={ heading }></MediaHeading>
-              <MediaText key={ imgID + 'b' } className="mr-4" text={ text }></MediaText>
+              <MediaHeading key={ id + 'a' } className="mr-4 text-danger" heading={ heading }></MediaHeading>
+              <MediaText key={ id + 'b' } className="mr-4" text={ text }></MediaText>
             </Scrollbars>
             <section className="d-flex justify-content-between mt-4 pt-2 mr-3 pr-3">
               <MediaButton 
@@ -74,15 +75,9 @@ export default function MediaObject(props) {
 }
 
 MediaObject.propTypes = {
-  imgID: PropTypes.string,
-  imgUrl: PropTypes.string,
-  imgWidth: PropTypes.number,
-  imgHeight: PropTypes.number,
-  alt: PropTypes.string,
+  image: PropTypes.object,
   imgLoaded: PropTypes.bool,
   changeImgStatus: PropTypes.func,
-  heading: PropTypes.string,
-  text: PropTypes.string,
   prevButtonState: PropTypes.bool,
   nextButtonState: PropTypes.bool,
   buttonClick: PropTypes.func,

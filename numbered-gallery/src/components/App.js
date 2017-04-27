@@ -15,6 +15,15 @@ class App extends React.Component {
       imgLoaded: false,
       heading: '',
       text: '',
+      image: {
+        id: '',
+        url: '',
+        width: 0,
+        height: 0,
+        alt: '',
+        heading: '',
+        text: ''
+      },
       disablePrevButton: false,
       disableNextButton: false
     };
@@ -52,6 +61,15 @@ class App extends React.Component {
       imgLoaded: false,
       heading: currImg.title,
       text: currImg.description,
+      image: {
+        id: currImg.id,
+        url: currImg.url,
+        width: currImg.width,
+        height: currImg.height,
+        alt: currImg.alt,
+        heading: currImg.title,
+        text: currImg.description 
+      },
       disablePrevButton: prevButtonState,
       disableNextButton: nextButtonState
     });
@@ -88,15 +106,9 @@ class App extends React.Component {
             </NumberBar>
           </div>
           <MediaObject
-            imgID={ this.state.images[this.state.currPos].id }
-            imgUrl={ this.state.imgUrl }
-            imgWidth={ this.state.images[this.state.currPos].width }
-            imgHeight={ this.state.images[this.state.currPos].height }
-            alt={ this.state.alt }
+            image={ this.state.image }
             imgLoaded={ this.state.imgLoaded }
             changeImgStatus={ this.updateImgLoaded }
-            heading={ this.state.heading }
-            text={ this.state.text }
             prevButtonState={ this.state.disablePrevButton }
             nextButtonState={ this.state.disableNextButton }
             buttonClick={ this.MediaButtonClick }
