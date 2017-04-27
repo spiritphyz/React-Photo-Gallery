@@ -52,7 +52,6 @@ class App extends React.Component {
 
     this.setState({
       currPos: currPos,
-      imgUrl: currImg.url,
       imgLoaded: false,
       image: {
         id: currImg.id,
