@@ -11,3 +11,7 @@
   transition: opacity 500ms 0ms;
   opacity: 1;
 } 
+
+.clip {
+  overflow: hidden;
+}

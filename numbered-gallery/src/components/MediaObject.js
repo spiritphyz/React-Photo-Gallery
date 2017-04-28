@@ -26,7 +26,7 @@ export default function MediaObject(props) {
     <section className={ joinClasses } { ...moreProps }>
       <div className="row">
         <div className="col-md-8 mt-0 pr-0 pl-0">
-            <div>
+            <div className="clip">
               <MediaImg 
                 className="img-fluid"
                 src={ url }
