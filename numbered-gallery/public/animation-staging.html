@@ -37,35 +37,28 @@
       transition: opacity 500ms 0ms;
     }
     .slide-to-left {
-      animation: slideleft 600ms 1;
-      will-change: transform;
+      animation: slideright 600ms 1;
     }
     .slide-to-right {
-      animation: slideright 600ms 1;
+      animation: slideright 500ms 1;
     }
     @keyframes slideleft {
       from {
-        -moz-transform: translateX(100%);
-        -webkit-transform: translateX(100%);
-        transform: translateX(100%);
+        margin-left: 100%;
         opacity: 0;
       }
       to {
-        -moz-transform: translateX(0%);
-        -webkit-transform: translateX(0%);
-        transform: translateX(0%);
+        margin-left: 0%;
         opacity: 1;
       }
     }
     @keyframes slideright {
       from {
-        -webkit-transform: translateX(-200%);
-        transform: translateX(-200%);
+        margin-left: -200%;
         opacity: 0;
       }
       to {
-        -webkit-transform: translateX(0%);
-        transform: translateX(0%);
+        margin-left: 0%;
         opacity: 1;
       }
     }
