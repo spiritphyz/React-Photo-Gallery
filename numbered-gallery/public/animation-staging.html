@@ -36,6 +36,42 @@
       opacity: 1;
       transition: opacity 500ms 0ms;
     }
+    .slide-to-left {
+      animation: slideleft 600ms 1;
+      will-change: transform;
+    }
+    .slide-to-right {
+      animation: slideright 600ms 1;
+    }
+    @keyframes slideleft {
+      from {
+        -moz-transform: translateX(100%);
+        -webkit-transform: translateX(100%);
+        transform: translateX(100%);
+        opacity: 0;
+      }
+      to {
+        -moz-transform: translateX(0%);
+        -webkit-transform: translateX(0%);
+        transform: translateX(0%);
+        opacity: 1;
+      }
+    }
+    @keyframes slideright {
+      from {
+        -webkit-transform: translateX(-200%);
+        transform: translateX(-200%);
+        opacity: 0;
+      }
+      to {
+        -webkit-transform: translateX(0%);
+        transform: translateX(0%);
+        opacity: 1;
+      }
+    }
+    .clip {
+      overflow: hidden;
+    }
   </style>
 </head>
 <body>
@@ -79,7 +115,9 @@
     </div>
     <div class="row">
       <div class="col-md-8 mt-0 pr-0 pl-0">
-        <img class="fade w-100" src="../src/images/chair-black-empty_1920x1280.jpg" alt="test image" />
+        <div class="clip">
+          <img class="slide-to-left col" src="http://spiritphyz.io/img/gg/chair-black-empty_1920x1280.jpg" alt="test image" />
+        </div>
       </div>
       <main class="col mr-3 ml-4">
         <h5 class="mt-4 pt-1 text-danger">Diagnostic Medical Imaging</h5>
