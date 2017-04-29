@@ -10,6 +10,7 @@ class App extends React.Component {
     this.state = {
       images: Store.imgData,
       currPos: Store.position,
+      direction: 'increase',
       imgLoaded: false,
       image: {
         id: '',
@@ -33,11 +34,11 @@ class App extends React.Component {
     let currPos = this.state.currPos;
     const nextPos = move === 'increase' ? ++currPos : --currPos;
     if (nextPos > -1 && nextPos < this.state.images.length) {
-      this.updateImgData(nextPos);
+      this.updateImgData(nextPos, move);
     }
   }
 
-  handleUpdateImgData(newIdx = this.state.currPos) {
+  handleUpdateImgData(newIdx = this.state.currPos, move = 'increase') {
     const currPos = this.updatePosition(newIdx);
     const currImg = this.state.images[currPos];
     let prevButtonState = false;
@@ -52,6 +53,7 @@ class App extends React.Component {
 
     this.setState({
       currPos: currPos,
+      direction: move,
       imgLoaded: false,
       image: {
         id: currImg.id,
@@ -99,6 +101,7 @@ class App extends React.Component {
           </div>
           <MediaObject
             image={ this.state.image }
+            move={ this.state.direction }
             imgLoaded={ this.state.imgLoaded }
             changeImgStatus={ this.updateImgLoaded }
             prevButtonState={ this.state.disablePrevButton }
