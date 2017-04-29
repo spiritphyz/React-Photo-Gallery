@@ -16,7 +16,7 @@ stateless functional components. The functional components can pass along furthe
 ### Polished UI and UX Design
 ![giant-gallery-auto-scrollbars](https://cloud.githubusercontent.com/assets/7908723/25415142/b05a4490-29ea-11e7-8012-ce7cf40cfa57.gif)
 
-Scroll bars will appear for long descriptions and disappear for short ones. The prev/next buttons have small "hover" animations, and the main poster images fade into view upon first load. (To replicate this initial behavior, visit the site again in a private browser window.)
+Scroll bars will appear for long descriptions and disappear for short ones. The main poster images slide and fade into view depending on the direction of movement, and the text descriptions also have a small fade-in. The prev/next buttons have subtle "hover" animations.
 
 ### Smart Stateless Functional Components
 ![giant-gallery-next-button-becomes-disabled](https://cloud.githubusercontent.com/assets/7908723/25415169/da4cc98a-29ea-11e7-87f4-4281d23f5e2f.gif)
@@ -29,11 +29,7 @@ The prev/next buttons display a "disabled" state when the current position is at
 ### Navigation Bar
 There is no functionality to handle many numbered items that expand beyond the width of the browser window. What should happen if there are 20 items in the gallery? A meeting with the UI/UX team is needed to talk about the behavior of the navbar when there is an excessive amount of images. It would also be nice to show all the image headlines as a list in the hamburger menu while it's toggled on.
 
-### More Polished UX
-The images stop fading when the images can be quickly loaded from the browser's cache instead of a network request. This inconsistent fading behavior can be improved in the future.
-
 ### More Optimizations
-
 Only 2 glyphs are used from the Typicons libary, so a custom font can be created that will be much smaller in file size. The medical images can be compressed further with Google's new [Guetzli](https://github.com/google/guetzli) perceptual JPG encoder. The list of images are in a component that acts as a local datastore. Connecting the images to a network endpoint (like the Flickr API) would show off the modularity of the design. 
 
 ## TECH STACK
