@@ -4,7 +4,7 @@ import classNames from 'classnames';
 import '../css/media-object-img.css';
 
 export default function MediaImg(props) {
-  const { move = 'increase', imgUrl, alt='Main Image', imgLoaded, changeImgStatus, className, children, ...moreProps } = props;
+  const { move='increase', imgUrl, alt='Main Image', imgLoaded, changeImgStatus, className, children, ...moreProps } = props;
   let moveOptions = {};
   let joinClasses = '';
   

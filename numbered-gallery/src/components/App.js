@@ -30,7 +30,7 @@ class App extends React.Component {
     this.updateImgLoaded = this.handleUpdateImgLoaded.bind(this);
   } 
 
-  handleMediaButtonClick(move = 'increase') {
+  handleMediaButtonClick(move='increase') {
     let currPos = this.state.currPos;
     const nextPos = move === 'increase' ? ++currPos : --currPos;
     if (nextPos > -1 && nextPos < this.state.images.length) {
@@ -38,7 +38,7 @@ class App extends React.Component {
     }
   }
 
-  handleUpdateImgData(newIdx = this.state.currPos, move = 'increase') {
+  handleUpdateImgData(newIdx=this.state.currPos, move='increase') {
     const currPos = this.updatePosition(newIdx);
     const currImg = this.state.images[currPos];
     let prevButtonState = false;
