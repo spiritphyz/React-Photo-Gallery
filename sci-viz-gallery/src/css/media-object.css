@@ -2,14 +2,3 @@
   font-size: .85rem;
   line-height: 1.40rem;
 }
-
-@font-face {
-  font-family: 'typicons';
-  src: url("../fonts/typicons.eot");
-  src: url("../fonts/typicons.eot?#iefix") format('embedded-opentype'),
-       url("../fonts/typicons.woff") format('woff'),
-       url("../fonts/typicons.ttf") format('truetype'),
-       url("../fonts/typicons.svg#typicons") format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
