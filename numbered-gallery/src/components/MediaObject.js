@@ -7,7 +7,8 @@ import MediaHeading from './MediaHeading';
 import MediaText from './MediaText';
 import MediaButton from './MediaButton';
 import '../css/media-object.css';
-import '../css/typicons.css';
+import ArrowRight from 'react-icons/lib/ti/media-play';
+import ArrowLeft from 'react-icons/lib/ti/media-play-reverse';
 
 export default function MediaObject(props) {
   const { image, move, imgLoaded, changeImgStatus, prevButtonState, nextButtonState, buttonClick, className, children, ...moreProps } = props;
@@ -16,10 +17,10 @@ export default function MediaObject(props) {
   const prevButtonClass = prevButtonState ? "btn" : "btn btn-danger";
   const nextButtonClass = nextButtonState ? "btn" : "btn btn-danger";
   const prevLabel = (
-    <div><span className="typcn typcn-media-play-reverse vsmall"></span><a className="small">PREV</a></div>
+    <div className="arrow-container"><ArrowLeft className="vsmall" /><a className="small">PREV</a></div>
   );
   const nextLabel = (
-    <div><a className="small">NEXT</a><span className="typcn typcn-media-play vsmall"></span></div>
+    <div className="arrow-container"><a className="small">NEXT</a><ArrowRight className="vsmall" /></div>
   );
 
   return (

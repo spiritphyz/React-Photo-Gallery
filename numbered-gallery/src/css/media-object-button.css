@@ -7,5 +7,9 @@
 
 .vsmall {
   font-size: .85rem;
-  vertical-align: 5%;
+}
+
+.arrow-container {
+  display: flex;
+  align-items: center;
 }
