@@ -1,5 +1,7 @@
 # Giant Gallery
-Demo: http://spiritphyz.io/giant-gallery
+Demos:
+* http://spiritphyz.io/giant-gallery
+* http://spiritphyz.io/sci-viz-gallery
 
 ## FEATURES
 ### Responsive and Accessible Design
