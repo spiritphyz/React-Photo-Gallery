@@ -17,10 +17,10 @@ export default function MediaObject(props) {
   const prevButtonClass = prevButtonState ? "btn" : "btn btn-success enabled-btn";
   const nextButtonClass = nextButtonState ? "btn" : "btn btn-success enabled-btn";
   const prevLabel = (
-    <div className="arrow-container"><ArrowLeft className="vsmall"/><a className="small">PREV</a></div>
+    <div className="arrow-container"><ArrowLeft className="vsmall" /><a className="small">PREV</a></div>
   );
   const nextLabel = (
-    <div className="arrow-container"><a className="small">NEXT</a><ArrowRight className="vsmall"/></div>
+    <div className="arrow-container"><a className="small">NEXT</a><ArrowRight className="vsmall" /></div>
   );
 
   return (
