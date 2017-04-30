@@ -53,7 +53,7 @@ export const Store = {
       alt: 'timeline of Nobel laureates',
       title: `A History of UC Berkeley\u02bcs Laureates`,
       subheading: 'Client: University of California, Berkeley',
-      role: 'Page Design: Tony Le',
+      role: 'Print Design: Tony Le',
       description: `Since the prize originated in 1901, 20 UC Berkeley faculty and 24 alumni have been awarded the Nobel Prize. Here is the story of Berkeley’s Nobel tradition, from the Prize\u02BCs surprising origin (it owes its existence to dynamite), to Berkeley’s most recent recipient, George Smoot.`,
       width: 1028,
       height: 668,
