@@ -8,6 +8,10 @@
 
 # production
 /build
+sci-viz-gallery/src/images/*
+sci-viz-gallery/src/fonts/*
+favicon.ico
+logo.svg
 
 # misc
 .DS_Store
