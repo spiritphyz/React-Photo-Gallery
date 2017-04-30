@@ -7,7 +7,8 @@ import MediaHeading from './MediaHeading';
 import MediaText from './MediaText';
 import MediaButton from './MediaButton';
 import '../css/media-object.css';
-import '../css/typicons.css';
+import ArrowRight from 'react-icons/lib/ti/arrow-right-thick';
+import ArrowLeft from 'react-icons/lib/ti/arrow-left-thick';
 
 export default function MediaObject(props) {
   const { image, move, imgLoaded, changeImgStatus, prevButtonState, nextButtonState, buttonClick, className, children, ...moreProps } = props;
@@ -16,10 +17,10 @@ export default function MediaObject(props) {
   const prevButtonClass = prevButtonState ? "btn" : "btn btn-success enabled-btn";
   const nextButtonClass = nextButtonState ? "btn" : "btn btn-success enabled-btn";
   const prevLabel = (
-    <div><span className="typcn typcn-arrow-left-thick"></span><a className="small">PREV</a></div>
+    <div className="arrow-container"><ArrowLeft className="vsmall"/><a className="small">PREV</a></div>
   );
   const nextLabel = (
-    <div><a className="small">NEXT</a><span className="typcn typcn-arrow-right-thick"></span></div>
+    <div className="arrow-container"><a className="small">NEXT</a><ArrowRight className="vsmall"/></div>
   );
 
   return (
