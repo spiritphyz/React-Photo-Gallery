@@ -37,6 +37,7 @@ Only 2 glyphs are used from the Typicons libary, so a custom font can be created
 ## TECH STACK
 * React 15.5.3 and [create-react-app](https://github.com/facebookincubator/create-react-app)
 * [React-custom-scrollbars](https://github.com/malte-wessel/react-custom-scrollbars)
+* [React-icons](https://github.com/gorangajic/react-icons)
 * [Bootstrap 4](https://v4-alpha.getbootstrap.com)
 * [Typicons](http://typicons.com)
 * [Sublime](https://www.sublimetext.com) / [Vim](http://www.vim.org) / [Eslint](http://eslint.org/)
