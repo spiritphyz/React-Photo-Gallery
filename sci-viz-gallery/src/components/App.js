@@ -18,8 +18,9 @@ class App extends React.Component {
         width: 0,
         height: 0,
         alt: '',
-        subheading: '',
         heading: '',
+        subheading: '',
+        role: '',
         text: ''
       },
       disablePrevButton: false,
@@ -64,6 +65,7 @@ class App extends React.Component {
         alt: currImg.alt,
         heading: currImg.title,
         subheading: currImg.subheading,
+        role: currImg.role,
         text: currImg.description 
       },
       disablePrevButton: prevButtonState,

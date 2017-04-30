@@ -11,21 +11,31 @@ import '../css/typicons.css';
 
 export default function MediaObject(props) {
   const { image, move, imgLoaded, changeImgStatus, prevButtonState, nextButtonState, buttonClick, className, children, ...moreProps } = props;
-  const {id, url, alt, heading, subheading, text} = image;
+  const {id, url, alt, heading, subheading, role, text} = image;
   const joinClasses = classNames('media-object', className);
   const prevButtonClass = prevButtonState ? "btn" : "btn btn-success enabled-btn";
   const nextButtonClass = nextButtonState ? "btn" : "btn btn-success enabled-btn";
   const prevLabel = (
-    <div><span className="typcn typcn-media-play-reverse vsmall"></span><a className="small">PREV</a></div>
+    <div><span className="typcn typcn-arrow-left-thick"></span><a className="small">PREV</a></div>
   );
   const nextLabel = (
-    <div><a className="small">NEXT</a><span className="typcn typcn-media-play vsmall"></span></div>
+    <div><a className="small">NEXT</a><span className="typcn typcn-arrow-right-thick"></span></div>
   );
 
   return (
     <section className={ joinClasses } { ...moreProps }>
       <div className="row">
-        <div className="col mt-0 pr-0 pl-0">
+        <div className="col-md-8 mt-0 pr-0 pl-0">
+          <MediaImg 
+          src={ url }
+          alt={ alt }
+          move={ move }
+          imgLoaded={ imgLoaded }
+          changeImgStatus={ changeImgStatus }
+          >
+          </MediaImg>
+        </div>
+        <div className="col" style={ {height: '270px'} }>
           <main className="mr-2 pr-0 ml-4 mh-100">
             <Scrollbars
               className="mt-4"
@@ -33,7 +43,8 @@ export default function MediaObject(props) {
               autoHeightMin={ 110 }
               autoHeightMax={ 250 }
             >
-              <MediaText className='sub-heading' text={ subheading }></MediaText>
+              <MediaText className='fade-up sub-heading' text={ subheading }></MediaText>
+              <MediaText className='fade-up role' text={ role }></MediaText>
               <MediaHeading key={ id + 'a' } className="fade-up mr-4" heading={ heading }></MediaHeading>
               <MediaText key={ id + 'b' } className="fade-up mr-4" text={ text }></MediaText>
             </Scrollbars>
@@ -54,16 +65,6 @@ export default function MediaObject(props) {
               </MediaButton>
             </section>
           </main>
-        </div>
-        <div className="col-md-8" style={ {height: '270px'} }>
-              <MediaImg 
-                src={ url }
-                alt={ alt }
-                move={ move }
-                imgLoaded={ imgLoaded }
-                changeImgStatus={ changeImgStatus }
-              >
-              </MediaImg>
         </div>
       </div>
       { children }
