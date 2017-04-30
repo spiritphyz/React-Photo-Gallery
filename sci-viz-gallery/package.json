@@ -1,0 +1,26 @@
+{
+  "name": "sci-viz-gallery",
+  "homepage": ".",
+  "version": "0.1.0",
+  "private": true,
+  "devDependencies": {
+    "react-scripts": "0.9.5"
+  },
+  "dependencies": {
+    "classnames": "^2.2.5",
+    "prop-types": "^15.5.6",
+    "react": "^15.5.3",
+    "react-custom-scrollbars": "^4.1.1",
+    "react-dom": "^15.5.3",
+    "typicons.font": "^2.0.8"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}

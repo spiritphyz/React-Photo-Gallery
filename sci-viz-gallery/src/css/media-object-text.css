@@ -1,0 +1,9 @@
+.sub-heading {
+  margin: 5px 0 16px 0;
+  text-transform: uppercase;
+  font-size: .6rem;
+  /*color: var(--secondary-bright-waterfall);*/
+  /*color: var(--primary-bright-moss);*/
+  color: var(--secondary-dark-thunder);
+  /*opacity: .8;*/
+}

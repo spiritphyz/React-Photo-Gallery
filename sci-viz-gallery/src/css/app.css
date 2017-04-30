@@ -1,0 +1,13 @@
+:root {
+  --primary-bright-moss: #aebd38;
+  --primary-dark-meadow: #598234;
+  --secondary-bright-waterfall: #68829e;
+  --secondary-dark-thunder: #505160;
+}
+
+.app {
+}
+
+.footer {
+  padding: 50px 0px;
+}

@@ -1,0 +1,11 @@
+.numberbar {
+}
+
+.gradient-bg {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#505160+0,68829e+100 */
+  background: #505160; /* Old browsers */
+  background: -moz-linear-gradient(left, #505160 0%, #68829e 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, #505160 0%,#68829e 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, #505160 0%,#68829e 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#505160', endColorstr='#68829e',GradientType=1 ); /* IE6-9 */
+}

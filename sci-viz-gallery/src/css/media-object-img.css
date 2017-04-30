@@ -1,0 +1,64 @@
+.media-object-image {
+}
+
+.clip {
+  overflow: hidden;
+}
+
+.fade-off {
+  transition: opacity 100ms 0ms;
+  opacity: 0.01;
+}
+
+.fade-on {
+  transition: opacity 600ms 0ms;
+  opacity: 1;
+} 
+
+.fade-up {
+  will-change: transform;
+  animation: slowfadein 600ms 1;
+}
+
+.slide-to-left {
+  will-change: transform;
+  animation: slideleft 600ms 1;
+}
+
+.slide-to-right {
+  will-change: transform;
+  animation: slideright 600ms 1;
+}
+
+@keyframes slideleft {
+  from {
+    /*margin-left: 100%;*/
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    /*margin-left: 0%;*/
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes slideright {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes slowfadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
