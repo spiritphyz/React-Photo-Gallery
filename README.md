@@ -32,7 +32,7 @@ The prev/next buttons display a "disabled" state when the current position is at
 There is no functionality to handle many numbered items that expand beyond the width of the browser window. What should happen if there are 20 items in the gallery? A meeting with the UI/UX team is needed to talk about the behavior of the navbar when there is an excessive amount of images. It would also be nice to show all the image headlines as a list in the hamburger menu while it's toggled on.
 
 ### More Optimizations
-Only 2 glyphs are used from the Typicons libary, so a custom font can be created that will be much smaller in file size. The medical images can be compressed further with Google's new [Guetzli](https://github.com/google/guetzli) perceptual JPG encoder. The list of images are in a component that acts as a local datastore. Connecting the images to a network endpoint (like the Flickr API) would show off the modularity of the design. 
+The list of images are in a component that acts as a local datastore. Connecting the images to a network endpoint (like the Flickr API) would show off the modularity of the design. 
 
 ## TECH STACK
 * React 15.5.3 and [create-react-app](https://github.com/facebookincubator/create-react-app)
