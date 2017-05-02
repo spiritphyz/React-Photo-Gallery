@@ -5,19 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Animation Staging</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  <link rel='stylesheet' href='http://spiritphyz.io/css/typicons.css' />
   <style>
+    @font-face {
+      font-family: 'typicons';
+      src: url("http://spiritphyz.io/fonts/typicons.eot");
+      src: url("http://spiritphyz.io/fonts/typicons.eot?#iefix") format('embedded-opentype'),
+      url("http://spiritphyz.io/fonts/typicons.woff") format('woff'),
+      url("http://spiritphyz.io/fonts/typicons.ttf") format('truetype'),
+      url("http://spiritphyz.io/fonts/typicons.svg#typicons") format('svg');
+      font-weight: normal;
+      font-style: normal;
+    }
     .gradient-bg {
       background: #58585a; /* Old browsers */
       background: -moz-linear-gradient(left, #58585a 0%, #dadadb 100%); /* FF3.6-15 */
       background: -webkit-linear-gradient(left, #58585a 0%,#dadadb 100%); /* Chrome10-25,Safari5.1-6 */
       background: linear-gradient(to right, #58585a 0%,#dadadb 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
       filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#58585a', endColorstr='#dadadb',GradientType=1 ); /* IE6-9 */    
-    }
-    .prim-color {
-      background-color: rgba(237, 106, 38, 1)
-    }
-    .disabled {
-      background-color: rgba(221, 221, 221, 1)
     }
     .smaller {
       font-size: .90rem;
@@ -65,6 +70,23 @@
     .clip {
       overflow: hidden;
     }
+
+    .sub-heading {
+      margin: 8px 0px;
+      text-transform: uppercase;
+      font-size: .6rem;
+      /*color: var(--secondary-dark-thunder);*/
+    }
+
+    .download {
+      display: flex;
+      align-items: center;
+      text-transform: uppercase;
+      font-size: .8rem;
+      opacity: .5;
+      /*color: var(--secondary-dark-thunder);*/
+    }
+
   </style>
 </head>
 <body>
@@ -113,11 +135,16 @@
         </div>
       </div>
       <main class="col mr-3 ml-4">
+        <div style="padding-top: 10px;">
+          <div class="sub-heading">Client: University of California, San Francisco</div>
+          <div class="sub-heading">Illustrator: Tony Le</div>
+        </div>
         <h5 class="mt-4 pt-1 text-danger">Diagnostic Medical Imaging</h5>
         <p>Nuclear medicine technologists prepare and administer radioactive drugs that make abnormal areas of the body appear different than normal areas, use special cameras to detect gamma rays emitted by the radioactive drugs in a patient’s body, explain imaging procedures to patients and answer questions.</p>
         <section class="d-flex justify-content-between mt-5">
-          <button type="button" class="btn" disabled><a class="small"><span class="vsmall">◀</span> PREV</a></button>
-          <button type="button" class="btn btn-danger"><a class="small">NEXT <span class="vsmall">▶</span></a></button>
+          <button type="button" class="btn rounded-circle" disabled><a class="small"><span class="sr-only">Previous</span><span class="vsmall">◀</span></a></button>
+          <a class="download" href="#"><span class="typcn typcn-download"></span>&nbsp;&nbsp;DOWNLOAD PDF</a>
+          <button type="button" class="btn btn-danger rounded-circle"><a class="small"><span class="vsmall">▶</span><span class="sr-only">Next</span></a></button>
         </section>
       </main>
     </div>
