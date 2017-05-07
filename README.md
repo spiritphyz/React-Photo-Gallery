@@ -40,6 +40,7 @@ The list of images are in a component that acts as a local datastore. Connecting
 * [React-icons](https://github.com/gorangajic/react-icons)
 * [Bootstrap 4](https://v4-alpha.getbootstrap.com)
 * [Typicons](http://typicons.com)
+* [ColorZilla CSS Gradients](http://www.colorzilla.com/gradient-editor/)
 * [Sublime](https://www.sublimetext.com) / [Vim](http://www.vim.org) / [Eslint](http://eslint.org/)
 * Freely-licensed images from [Pixabay](https://pixabay.com/) and [Unsplash](https://unsplash.com/)
 * Deployed on Digital Ocean with Ubuntu 16.04 and Nginx
