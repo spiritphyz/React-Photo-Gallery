@@ -2,6 +2,12 @@
   font-weight: 500;
 }
 
+.numberbar-button aside {
+  font-weight: normal;
+  display: inline;
+  padding: 0 0 0 5px;
+}
+
 .underline {
   text-color: #fff;
   border-bottom: 3px solid var(--primary-bright-moss);
