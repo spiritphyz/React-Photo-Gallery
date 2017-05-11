@@ -7,7 +7,7 @@ Demos:
 ### Responsive and Accessible Design
 ![giant-gallery-responsive](https://cloud.githubusercontent.com/assets/7908723/25415205/21fe52c6-29eb-11e7-8425-0995a021074b.gif)
 
-The layout can accomodate wide desktop browser windows and skinny mobile phone screens. The navigation bar will collapse into a "hamburber menu" for image list access when the window is too narrow. The menu system incorporates extra tags to provide additional information to users browsing with screen readers.
+The layout can accomodate wide desktop browser windows and skinny mobile phone screens. The navigation bar will collapse into a "hamburber menu" for image list access when the window is too narrow (and additionally shows image titles in a columnar format). The menu system incorporates extra tags to provide additional information to users browsing with screen readers.
 
 ### Modular Components
 ![giant-gallery-reusable-components](https://cloud.githubusercontent.com/assets/7908723/25415281/91d5d9b6-29eb-11e7-8ac8-88216d4de481.gif)
@@ -29,7 +29,7 @@ The prev/next buttons display a "disabled" state when the current position is at
 ## FUTURE IMPROVEMENTS
 
 ### Navigation Bar
-There is no functionality to handle many numbered items that expand beyond the width of the browser window. What should happen if there are 20 items in the gallery? A meeting with the UI/UX team is needed to talk about the behavior of the navbar when there is an excessive amount of images. It would also be nice to show all the image headlines as a list in the hamburger menu while it's toggled on.
+There is no functionality to handle many numbered items that expand beyond the width of the browser window. What should happen if there are 20 items in the gallery? A meeting with the UI/UX team is needed to talk about the behavior of the navbar when there is an excessive amount of images.
 
 ### More Optimizations
 The list of images are in a component that acts as a local datastore. Connecting the images to a network endpoint (like the Flickr API) would show off the modularity of the design. 
