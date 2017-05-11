@@ -23,10 +23,12 @@ class App extends React.Component {
         role: '',
         text: ''
       },
-      disablePrevButton: false,
-      disableNextButton: false
+      pnButtons: {
+        mediaButtonClick: () => {},
+        prevButtonState: false,
+        nextButtonState: false
+      }
     };
-    this.MediaButtonClick = this.handleMediaButtonClick.bind(this);
     this.updateImgData = this.handleUpdateImgData.bind(this);
     this.updatePosition = this.handleChangePosition.bind(this);
     this.updateImgLoaded = this.handleUpdateImgLoaded.bind(this);
@@ -68,8 +70,11 @@ class App extends React.Component {
         role: currImg.role,
         text: currImg.description 
       },
-      disablePrevButton: prevButtonState,
-      disableNextButton: nextButtonState
+      pnButtons: {
+        mediaButtonClick: this.handleMediaButtonClick.bind(this),
+        prevButtonState: prevButtonState,
+        nextButtonState: nextButtonState
+      }
     });
   }
 
@@ -88,6 +93,11 @@ class App extends React.Component {
 
   componentDidMount() {
     this.updateImgData();
+    // this.setState({
+    //   pnButtons: {
+    //     mediaButtonClick: this.handleMediaButtonClick.bind(this)
+    //   }
+    // });
   }
 
   render() {
@@ -108,9 +118,7 @@ class App extends React.Component {
             move={ this.state.direction }
             imgLoaded={ this.state.imgLoaded }
             changeImgStatus={ this.updateImgLoaded }
-            prevButtonState={ this.state.disablePrevButton }
-            nextButtonState={ this.state.disableNextButton }
-            buttonClick={ this.MediaButtonClick }
+            mediaButtons={ this.state.pnButtons }
           >
           </MediaObject>
         </div>

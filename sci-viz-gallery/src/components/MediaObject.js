@@ -11,8 +11,9 @@ import ArrowRight from 'react-icons/lib/ti/arrow-right-thick';
 import ArrowLeft from 'react-icons/lib/ti/arrow-left-thick';
 
 export default function MediaObject(props) {
-  const { image, move, imgLoaded, changeImgStatus, prevButtonState, nextButtonState, buttonClick, className, children, ...moreProps } = props;
-  const {id, url, alt, heading, subheading, role, text} = image;
+  const { image, move, imgLoaded, changeImgStatus, mediaButtons, className, children, ...moreProps } = props;
+  const { id, url, alt, heading, subheading, role, text } = image;
+  const { prevButtonState, nextButtonState, mediaButtonClick } = mediaButtons;
   const joinClasses = classNames('media-object', className);
   const prevButtonClass = prevButtonState ? "btn" : "btn btn-success enabled-btn";
   const nextButtonClass = nextButtonState ? "btn" : "btn btn-success enabled-btn";
@@ -54,14 +55,14 @@ export default function MediaObject(props) {
                 className={ prevButtonClass }
                 isDisabled={ prevButtonState }
                 label={ prevLabel }
-                buttonClick={ () => buttonClick('decrease') }
+                buttonClick={ () => mediaButtonClick('decrease') }
               >
               </MediaButton>
               <MediaButton 
                 className={ nextButtonClass }
                 isDisabled={ nextButtonState }
                 label={ nextLabel }
-                buttonClick={ () => buttonClick('increase') }
+                buttonClick={ () => mediaButtonClick('increase') }
               >
               </MediaButton>
             </section>
@@ -78,9 +79,7 @@ MediaObject.propTypes = {
   move: PropTypes.string,
   imgLoaded: PropTypes.bool,
   changeImgStatus: PropTypes.func,
-  prevButtonState: PropTypes.bool,
-  nextButtonState: PropTypes.bool,
-  buttonClick: PropTypes.func,
+  mediaButtons: PropTypes.object,
   className: PropTypes.string,
   children: PropTypes.node
 };
