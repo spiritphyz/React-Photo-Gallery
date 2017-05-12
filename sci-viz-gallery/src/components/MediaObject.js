@@ -9,10 +9,11 @@ import MediaButton from './MediaButton';
 import '../css/media-object.css';
 import ArrowRight from 'react-icons/lib/ti/arrow-right-thick';
 import ArrowLeft from 'react-icons/lib/ti/arrow-left-thick';
+import Download from 'react-icons/lib/ti/download';
 
 export default function MediaObject(props) {
   const { image, move, imgLoaded, changeImgStatus, mediaButtons, className, children, ...moreProps } = props;
-  const { id, url, alt, heading, subheading, role, text } = image;
+  const { id, url, pdfUrl, alt, heading, subheading, role, text } = image;
   const { prevButtonState, nextButtonState, mediaButtonClick } = mediaButtons;
   const joinClasses = classNames('media-object', className);
   const prevButtonClass = prevButtonState ? "btn" : "btn btn-success enabled-btn";
@@ -23,6 +24,16 @@ export default function MediaObject(props) {
   const nextLabel = (
     <div className="arrow-container"><a className="small">NEXT</a><ArrowRight className="vsmall" /></div>
   );
+  let pdfLink = ('');
+
+  if (pdfUrl) {
+    pdfLink = (
+      <a className="pdf-text" href={ pdfUrl }>
+      <Download className="pdf-icon"></Download>
+      DOWNLOAD PDF
+      </a>
+    );
+  } 
 
   return (
     <section className={ joinClasses } { ...moreProps }>
@@ -58,6 +69,9 @@ export default function MediaObject(props) {
                 buttonClick={ () => mediaButtonClick('decrease') }
               >
               </MediaButton>
+
+              { pdfLink }
+
               <MediaButton 
                 className={ nextButtonClass }
                 isDisabled={ nextButtonState }

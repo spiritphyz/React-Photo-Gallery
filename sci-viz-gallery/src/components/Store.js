@@ -6,6 +6,7 @@ export const Store = {
     {
       id: '1000',
       url: 'http://spiritphyz.io/img/bsr/b-sheet-illustration_773x494.jpg',
+      pdfUrl: '',
       alt: 'beta sheet of protein structures',
       title: 'Protein Secondary Structures: Beta Pleated Sheets',
       subheading: 'Client: University of California, San Francisco',
@@ -17,6 +18,7 @@ export const Store = {
     {
       id: '2000',
       url: 'http://spiritphyz.io/img/bsr/cell-gates_1000x661.png',
+      pdfUrl: 'https://www.ocf.berkeley.edu/~tonyle/sci-viz-gallery/Tony-TC-Le-Ion-Channels-Illustration.pdf',
       alt: 'ion channel proteins being activated',
       title: 'Ion Channel Gating Mechanisms',
       subheading: 'Client: University of California, Berkeley',
@@ -28,6 +30,7 @@ export const Store = {
     {
       id: '3000',
       url: 'http://spiritphyz.io/img/bsr/photosynthesis_1000x583.png',
+      pdfUrl: 'https://www.ocf.berkeley.edu/~tonyle/sci-viz-gallery/Tony-TC-Le-Photosynthesis-Illustrations.pdf',
       alt: 'electrical generation in plants and photovoltaics',
       title: 'Lean, Mean, Green Machines',
       subheading: 'Client: University of California, Berkeley',
@@ -39,6 +42,7 @@ export const Store = {
     {
       id: '4000',
       url: 'http://spiritphyz.io/img/bsr/CRISPR-illustration_1000x961.jpg',
+      pdfUrl: 'https://www.ocf.berkeley.edu/~tonyle/sci-viz-gallery/Tony-TC-Le-CRISPR-Illustration.pdf',
       alt: 'high-level overview of CRISPR mechanism',
       title: 'The Evolution of Bacterial Immunity',
       subheading: 'Client: University of California, Berkeley',
@@ -50,6 +54,7 @@ export const Store = {
     {
       id: '5000',
       url: 'http://spiritphyz.io/img/bsr/nobel-tradition-page-layout_1028x668.png',
+      pdfUrl: 'https://www.ocf.berkeley.edu/~tonyle/sci-viz-gallery/Tony-TC-Le-Print-Design.pdf',
       alt: 'timeline of Nobel laureates',
       title: `A History of UC Berkeley\u02bcs Laureates`,
       subheading: 'Client: University of California, Berkeley',

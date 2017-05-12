@@ -2,3 +2,18 @@
   font-size: .85rem;
   line-height: 1.40rem;
 }
+
+.pdf-icon {
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  padding-right: 8px;
+}
+
+.pdf-text {
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  font-size: .8rem;
+  opacity: .7;
+  /*color: var(--secondary-dark-thunder);*/
+}

@@ -15,6 +15,7 @@ class App extends React.Component {
       image: {
         id: '',
         url: '',
+        pdfUrl: '',
         width: 0,
         height: 0,
         alt: '',
@@ -62,6 +63,7 @@ class App extends React.Component {
       image: {
         id: currImg.id,
         url: currImg.url,
+        pdfUrl: currImg.pdfUrl,
         width: currImg.width,
         height: currImg.height,
         alt: currImg.alt,
