@@ -16,7 +16,7 @@
 } 
 
 .fade-up {
-  will-change: transform;
+  will-change: opacity;
   animation: slowfadein 900ms 1;
 }
 
@@ -32,12 +32,10 @@
 
 @keyframes slideleft {
   from {
-    /*margin-left: 100%;*/
     transform: translateX(100%);
     opacity: 0;
   }
   to {
-    /*margin-left: 0%;*/
     transform: translateX(0%);
     opacity: 1;
   }

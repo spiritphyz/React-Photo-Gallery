@@ -28,7 +28,7 @@ export default function MediaObject(props) {
 
   if (pdfUrl) {
     pdfLink = (
-      <a className="pdf-text" href={ pdfUrl }>
+      <a className="fade-up pdf-text" href={ pdfUrl }>
       <Download className="pdf-icon"></Download>
       DOWNLOAD PDF
       </a>

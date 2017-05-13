@@ -26,7 +26,7 @@ export default function NumberBarButton(props) {
 
 
   return (
-    <div className={ joinClasses } onClick={ () => buttonClick(imgIdx) } { ...moreProps }>
+    <div className={ joinClasses } onClick={ () => buttonClick(true, imgIdx) } { ...moreProps }>
       <li>
         <a href="#" className={ joinAnchorClasses }>
           { label }

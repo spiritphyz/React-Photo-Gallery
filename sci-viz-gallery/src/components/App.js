@@ -39,11 +39,11 @@ class App extends React.Component {
     let currPos = this.state.currPos;
     const nextPos = move === 'increase' ? ++currPos : --currPos;
     if (nextPos > -1 && nextPos < this.state.images.length) {
-      this.updateImgData(nextPos, move);
+      this.updateImgData(false, nextPos, move);
     }
   }
 
-  handleUpdateImgData(newIdx=this.state.currPos, move='increase') {
+  handleUpdateImgData(navClick=false, newIdx=this.state.currPos, move='increase') {
     const currPos = this.updatePosition(newIdx);
     const currImg = this.state.images[currPos];
     let prevButtonState = false;
@@ -59,7 +59,7 @@ class App extends React.Component {
     this.setState({
       currPos: currPos,
       direction: move,
-      imgLoaded: false,
+      imgLoaded: navClick,
       image: {
         id: currImg.id,
         url: currImg.url,
