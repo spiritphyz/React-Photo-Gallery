@@ -25,7 +25,7 @@ class App extends React.Component {
         text: ''
       },
       pnButtons: {
-        mediaButtonClick: () => {},
+        mediaButtonClick: this.handleMediaButtonClick.bind(this),
         prevButtonState: false,
         nextButtonState: false
       }
@@ -72,11 +72,10 @@ class App extends React.Component {
         role: currImg.role,
         text: currImg.description 
       },
-      pnButtons: {
-        mediaButtonClick: this.handleMediaButtonClick.bind(this),
+      pnButtons: Object.assign(this.state.pnButtons, {
         prevButtonState: prevButtonState,
         nextButtonState: nextButtonState
-      }
+      })
     });
   }
 
@@ -95,11 +94,6 @@ class App extends React.Component {
 
   componentDidMount() {
     this.updateImgData();
-    // this.setState({
-    //   pnButtons: {
-    //     mediaButtonClick: this.handleMediaButtonClick.bind(this)
-    //   }
-    // });
   }
 
   render() {

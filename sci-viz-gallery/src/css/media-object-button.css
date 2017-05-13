@@ -3,7 +3,6 @@
 
 .enabled-btn {
   border: 0;
-  /*background-color: var(--primary-dark-meadow);*/
   background-color: var(--primary-bright-moss);
 }
 
@@ -17,5 +16,5 @@
 
 .arrow-container {
   display: flex;
-  align-items: center;
+  justify-content: center;
 }
