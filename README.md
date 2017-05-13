@@ -20,6 +20,8 @@ stateless functional components. The functional components can pass along furthe
 
 Scroll bars will appear for long descriptions and disappear for short ones. The main poster images slide and fade into view depending on the direction of movement, and the text descriptions also have a small fade-in. The prev/next buttons have subtle "hover" animations.
 
+The animations are optimized for GPU acceleration on mobile platforms, so they animate very smoothly.
+
 ### Smart Stateless Functional Components
 ![giant-gallery-next-button-becomes-disabled](https://cloud.githubusercontent.com/assets/7908723/25415169/da4cc98a-29ea-11e7-87f4-4281d23f5e2f.gif)
 
