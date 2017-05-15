@@ -1,7 +1,7 @@
 # Giant Gallery
 Demos:
-* http://spiritphyz.io/giant-gallery
-* http://spiritphyz.io/sci-viz-gallery
+* http://spiritphyz.io/giant-gallery — (original design)
+* http://spiritphyz.io/sci-viz-gallery — (alternate design & color scheme)
 
 ## FEATURES
 ### Responsive and Accessible Design
