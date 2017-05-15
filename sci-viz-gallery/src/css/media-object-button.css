@@ -1,4 +1,6 @@
 .media-object-button {
+  width: 50px;
+  height: 50px;
 }
 
 .enabled-btn {
@@ -11,7 +13,8 @@
 }
 
 .vsmall {
-  font-size: .90rem;
+  font-size: 1.50rem;
+  line-height: 1.50rem;
 }
 
 .arrow-container {

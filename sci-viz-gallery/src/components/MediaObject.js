@@ -16,13 +16,17 @@ export default function MediaObject(props) {
   const { id, url, pdfUrl, alt, heading, subheading, role, text } = image;
   const { prevButtonState, nextButtonState, mediaButtonClick } = mediaButtons;
   const joinClasses = classNames('media-object', className);
-  const prevButtonClass = prevButtonState ? "btn" : "btn btn-success enabled-btn";
-  const nextButtonClass = nextButtonState ? "btn" : "btn btn-success enabled-btn";
+  const prevButtonClass = prevButtonState ? 
+    "btn rounded-circle d-flex justify-content-center" :
+    "btn rounded-circle d-flex justify-content-center btn-success enabled-btn";
+  const nextButtonClass = nextButtonState ? 
+    "btn rounded-circle d-flex justify-content-center" : 
+    "btn rounded-circle d-flex justify-content-center btn-success enabled-btn";
   const prevLabel = (
-    <div className="arrow-container"><ArrowLeft className="vsmall" /><a className="small">PREV</a></div>
+    <div className="arrow-container"><a className="small"><ArrowLeft className="vsmall" /></a></div>
   );
   const nextLabel = (
-    <div className="arrow-container"><a className="small">NEXT</a><ArrowRight className="vsmall" /></div>
+    <div className="arrow-container"><a className="small"><ArrowRight className="vsmall" /></a></div>
   );
   let pdfLink = ('');
 
