@@ -23,10 +23,20 @@ export default function MediaObject(props) {
     "btn rounded-circle d-flex justify-content-center" : 
     "btn rounded-circle d-flex justify-content-center btn-success enabled-btn";
   const prevLabel = (
-    <div className="arrow-container"><a className="small"><ArrowLeft className="vsmall" /></a></div>
+    <div className="arrow-container">
+      <a className="small">
+        <ArrowLeft className="vsmall" />
+      </a>
+      <span className="sr-only">Previous</span>
+    </div>
   );
   const nextLabel = (
-    <div className="arrow-container"><a className="small"><ArrowRight className="vsmall" /></a></div>
+    <div className="arrow-container">
+      <a className="small">
+        <ArrowRight className="vsmall" />
+      </a>
+      <span className="sr-only">Next</span>
+    </div>
   );
   let pdfLink = ('');
 
