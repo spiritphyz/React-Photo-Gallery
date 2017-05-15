@@ -75,7 +75,7 @@ export default function MediaObject(props) {
               <MediaHeading key={ id + 'a' } className="fade-up mr-4" heading={ heading }></MediaHeading>
               <MediaText key={ id + 'b' } className="fade-up mr-4" text={ text }></MediaText>
             </Scrollbars>
-            <section className="d-flex justify-content-between mt-4 pt-2 mr-2 pr-0">
+            <section className="d-flex justify-content-between mt-4 pt-2 mr-3 pr-0">
               <MediaButton 
                 className={ prevButtonClass }
                 isDisabled={ prevButtonState }

@@ -23,7 +23,7 @@ export const Store = {
       title: 'Ion Channel Gating Mechanisms',
       subheading: 'Client: University of California, Berkeley',
       role: 'Illustrator: Tony Le',
-      description: `Cells manage a multitude of signals with ion channels, in part by using channels controlled in different ways. These \u201Cgating mechanisms\u201D are generally variations on a common theme: A stimulus causes a shape change in the ion channel protein that opens the channel pore to conduct ion  ow or closes to block it.`,
+      description: `Cells manage a multitude of signals with ion channels, in part by using channels controlled in different ways. These \u201Cgating mechanisms\u201D are generally variations on a common theme: A stimulus causes a shape change in the ion channel protein that opens the channel pore to conduct ion flow or closes to block it.`,
       width: 1000,
       height: 661,
     },
