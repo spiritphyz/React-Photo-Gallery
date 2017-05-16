@@ -11,7 +11,15 @@ export default function NumberBar(props) {
   return (
     <div className={ joinClasses } { ...moreProps }>
       <nav>
-        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarToggler"
+          aria-controls="navbarToggler"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarToggler">
@@ -23,10 +31,12 @@ export default function NumberBar(props) {
                 return (
                   <NumberBarButton
                     label={ displayNum }
+                    responsiveLabel={ '- ' + img.title }
                     key={ num }
                     index={ num }
                     className="nav-item pr-4 pl-4"
                     anchorClassName="nav-link smaller"
+                    asideClassName="hidden-md-up"
                     buttonClick={ buttonClick }
                     currPos={ currPos }
                   >
