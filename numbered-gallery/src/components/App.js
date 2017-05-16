@@ -74,7 +74,7 @@ class App extends React.Component {
     if (isValidNum) {
       return Store.setPosition(newIdx);
     } else {
-      console.log('🍊  invalid index given to handleChangePosition:', newIdx);
+      console.log(`🍊  invalid index given to handleChangePosition: ${newIdx}`);
     }
   }
 
