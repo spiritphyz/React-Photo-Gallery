@@ -42,6 +42,9 @@ The list of images are in a component that acts as a local datastore. Connecting
 * [React-icons](https://github.com/gorangajic/react-icons)
 * [Bootstrap 4](https://v4-alpha.getbootstrap.com)
 * [Typicons](http://typicons.com)
+* Implemented as SVG graphics, not icon font glyphs
+  * SVG icons [display correctly on mobile and have better accessibility](https://github.com/blog/2112-delivering-octicons-with-svg)
+  * Icon font glyphs appear as [random Unicode emoticons on iOS](https://cloudfour.com/thinks/seriously-dont-use-icon-fonts/#they-encroach-on-emoji-turf) and have many display problems
 * [ColorZilla CSS Gradients](http://www.colorzilla.com/gradient-editor/)
 * [Sublime](https://www.sublimetext.com) / [Vim](http://www.vim.org) / [Eslint](http://eslint.org/)
 * Freely-licensed images from [Pixabay](https://pixabay.com/) and [Unsplash](https://unsplash.com/)
