@@ -40,7 +40,8 @@ The list of images are in a component that acts as a local datastore. Connecting
 * React 15.5.3 and [create-react-app](https://github.com/facebookincubator/create-react-app)
 * [Bootstrap 4](https://v4-alpha.getbootstrap.com)
 * [React-custom-scrollbars](https://github.com/malte-wessel/react-custom-scrollbars)
-* [React-icons](https://github.com/gorangajic/react-icons) - for SVG versions of Typicons
+* [React-icons](https://github.com/gorangajic/react-icons)
+  * for SVG versions of Typicons
 * [Typicons](http://typicons.com)
   * Implemented as SVG graphics, not icon font glyphs
     * SVG icons [display correctly on mobile and have better accessibility](https://github.com/blog/2112-delivering-octicons-with-svg)
