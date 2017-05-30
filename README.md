@@ -38,13 +38,13 @@ The list of images are in a component that acts as a local datastore. Connecting
 
 ## TECH STACK
 * React 15.5.3 and [create-react-app](https://github.com/facebookincubator/create-react-app)
-* [React-custom-scrollbars](https://github.com/malte-wessel/react-custom-scrollbars)
-* [React-icons](https://github.com/gorangajic/react-icons)
 * [Bootstrap 4](https://v4-alpha.getbootstrap.com)
+* [React-custom-scrollbars](https://github.com/malte-wessel/react-custom-scrollbars)
+* [React-icons](https://github.com/gorangajic/react-icons) - for SVG versions of Typicons
 * [Typicons](http://typicons.com)
-* Implemented as SVG graphics, not icon font glyphs
-  * SVG icons [display correctly on mobile and have better accessibility](https://github.com/blog/2112-delivering-octicons-with-svg)
-  * Icon font glyphs appear as [random Unicode emoticons on iOS](https://cloudfour.com/thinks/seriously-dont-use-icon-fonts/#they-encroach-on-emoji-turf) and have many display problems
+  * Implemented as SVG graphics, not icon font glyphs
+    * SVG icons [display correctly on mobile and have better accessibility](https://github.com/blog/2112-delivering-octicons-with-svg)
+    * Icon font glyphs appear as [random Unicode emoticons on iOS](https://cloudfour.com/thinks/seriously-dont-use-icon-fonts/#they-encroach-on-emoji-turf) and have many display problems. Even the so-called "[bulletproof](http://typicons.com/more/how-to-use-typicons/)" method doesn't work on iOS.
 * [ColorZilla CSS Gradients](http://www.colorzilla.com/gradient-editor/)
 * [Sublime](https://www.sublimetext.com) / [Vim](http://www.vim.org) / [Eslint](http://eslint.org/)
 * Freely-licensed images from [Pixabay](https://pixabay.com/) and [Unsplash](https://unsplash.com/)
