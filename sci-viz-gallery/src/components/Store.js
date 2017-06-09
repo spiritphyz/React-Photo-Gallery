@@ -54,7 +54,7 @@ export const Store = {
     {
       id: '5000',
       url: 'http://spiritphyz.io/img/bsr/nobel-tradition-page-layout_1028x668.png',
-      pdfUrl: 'https://www.ocf.berkeley.edu/~tonyle/sci-viz-gallery/img/nobel-tradition-page-layout_1028x668.png',
+      pdfUrl: 'https://www.ocf.berkeley.edu/~tonyle/sci-viz-gallery/Tony-TC-Le-Print-Design.pdf',
       alt: 'timeline of Nobel laureates',
       title: `A History of UC Berkeley\u02bcs Laureates`,
       subheading: 'Client: University of California, Berkeley',
