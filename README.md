@@ -38,7 +38,7 @@ The list of images are in a component that acts as a local datastore. Connecting
 
 ## TECH STACK
 * React 15.5.3 and [create-react-app](https://github.com/facebookincubator/create-react-app)
-* [Bootstrap 4](https://v4-alpha.getbootstrap.com)
+* [Bootstrap 4](https://v4-alpha.getbootstrap.com) / CSS3 Animations
 * [React-custom-scrollbars](https://github.com/malte-wessel/react-custom-scrollbars)
 * [React-icons](https://github.com/gorangajic/react-icons)
   * for SVG versions of Typicons
