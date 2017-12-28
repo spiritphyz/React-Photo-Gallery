@@ -1,6 +1,6 @@
-# Giant Gallery
+# React Gallery
 Demos:
-* http://spiritphyz.io/giant-gallery – (original design)
+* http://spiritphyz.io/react-gallery – (original design)
 * http://spiritphyz.io/sci-viz-gallery – (alternate design + color scheme)
 
 ## FEATURES
